@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- android:tileMode="repeat"	 -->
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+        android:src="@drawable/bg"
+        android:tileMode="repeat"
+		android:filter="false"
+		android:antialias="true"
+        android:dither="true"
+        android:gravity="left"/>

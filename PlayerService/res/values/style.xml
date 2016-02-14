@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<style name="SearchSwitchButtonStyle" parent="android:Widget.Button">
+	 <item name="android:layout_height">wrap_content</item>
+	 <item name="android:layout_width">104dp</item>
+	 <item name="android:textColor">#FFF</item>
+	 <item name="android:textSize">16dp</item>
+	 <item name="android:layout_margin">0dp</item>
+	 <item name="android:padding">5dp</item>
+	</style>
+	<style name="AlbumDetailButtonStyle" parent="android:Widget.Button">
+	 <item name="android:layout_height">wrap_content</item>
+	 <item name="android:layout_width">94dp</item>
+	 <item name="android:textColor">#FFF</item>
+	 <item name="android:textSize">14dp</item>
+	 <item name="android:layout_margin">3dp</item>
+	 <item name="android:padding">5dp</item>
+	 <!-- <item name="android:background">@drawable/btn_red</item> -->
+	</style>	
+	<style name="SettingButtonStyle" parent="android:Widget.Button">
+	 <item name="android:layout_height">wrap_content</item>
+	 <item name="android:layout_width">wrap_content</item>
+	 <item name="android:textColor">#FFF</item>
+	 <item name="android:textSize">16dp</item>
+	 <item name="android:padding">5dp</item>
+	 <item name="android:background">@drawable/red_btn_selector</item>
+	</style>
+	<style name="CheckboxGrayButtonStyle" parent="android:Widget.Button">
+	 <item name="android:layout_height">wrap_content</item>
+	 <item name="android:layout_width">wrap_content</item>
+	 <item name="android:textColor">#FFF</item>
+	 <item name="android:textSize">16dp</item>
+	 <item name="android:padding">5dp</item>
+	 <item name="android:background">@drawable/gray_btn_selector</item>
+	</style>	
+	<style name="CheckboxRedButtonStyle" parent="android:Widget.Button">
+	 <item name="android:layout_height">wrap_content</item>
+	 <item name="android:layout_width">wrap_content</item>
+	 <item name="android:textColor">#FFF</item>
+	 <item name="android:textSize">16dp</item>
+	 <item name="android:padding">5dp</item>
+	 <item name="android:background">@drawable/red_btn_selector</item>
+	</style>		 
+	<style name="DialogCancelButtonStyle" parent="android:Widget.Button">
+	 <item name="android:layout_height">wrap_content</item>
+	 <item name="android:layout_width">94dp</item>
+	 <item name="android:textColor">#FFF</item>
+	 <item name="android:textSize">16dp</item>
+	 <item name="android:padding">5dp</item>
+	 <item name="android:background">@drawable/gray_btn_selector</item>
+	</style>	
+	<style name="DialogConfirmButtonStyle" parent="android:Widget.Button">
+	 <item name="android:layout_height">wrap_content</item>
+	 <item name="android:layout_width">94dp</item>
+	 <item name="android:textColor">#FFF</item>
+	 <item name="android:textSize">16dp</item>
+	 <item name="android:padding">5dp</item>
+	 <item name="android:background">@drawable/red_btn_selector</item>
+	</style>	
+	<style name="HomeGrayButtonStyle" parent="android:Widget.Button">
+	 <item name="android:layout_height">40dp</item>
+	 <item name="android:layout_width">100dp</item>
+	 <item name="android:gravity">center</item>
+	 <item name="android:textColor">#FFF</item>
+	 <item name="android:textSize">18dp</item>
+	 <item name="android:padding">5dp</item>
+	 <item name="android:background">@drawable/gray_btn_selector</item>
+	</style>	
+	<style name="HomeRedButtonStyle" parent="android:Widget.Button">
+	 <item name="android:layout_height">40dp</item>
+	 <item name="android:layout_width">100dp</item>
+	 <item name="android:gravity">center</item>
+	 <item name="android:textColor">#FFF</item>
+	 <item name="android:textSize">18dp</item>
+	 <item name="android:padding">5dp</item>
+	 <item name="android:background">@drawable/red_btn_selector</item>
+	</style>		 	
+	<style name="WindowTitleBackground">     
+        <item name="android:background">@drawable/top_title_bg</item>
+    </style>
+	<style name="WindowTitle" parent="android:WindowTitle">
+        <item name="android:paddingLeft">10dp</item>
+    </style>    
+	<style name="CustomisedListBackground" parent="android:Widget.ListView">
+        <item name="android:listSelector">@drawable/list_selector</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:divider">@drawable/line</item>
+        <item name="android:background">@android:color/transparent</item>
+	</style>
+	<style name="CustomisedCheckListBackground" parent="android:Widget.ListView">
+        <item name="android:listSelector">@drawable/list_bg</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:divider">@drawable/line</item>
+        <item name="android:background">@android:color/transparent</item>
+	</style>
+</resources>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 0.0 root linear layout -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/player_root"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="@drawable/app_bg">
+
+	<!-- player Panel-->
+	<LinearLayout
+		android:id="@+id/player_panel"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:orientation="vertical"
+		android:gravity="center">
+		<!-- 1.0 player top banner box -->
+		<LinearLayout
+			android:id="@+id/player_top_info_banner_box"
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:orientation="horizontal"
+			android:background="@drawable/songtitle_bg">
+			<LinearLayout
+				android:layout_width="60dp"
+				android:layout_height="40dp"
+				android:gravity="center">
+				<ImageView
+					android:id="@+id/title_btn_info"
+		   			android:layout_width="wrap_content"
+		   			android:layout_height="wrap_content"
+		  	 		android:src="@drawable/player_info_selector"/>
+	  	 	</LinearLayout>			
+			<LinearLayout
+				android:layout_width="200dp"
+				android:layout_height="40dp"
+				android:orientation="vertical">
+				<!-- 1.1 player top banner : playing song name -->
+				<TextView
+					android:id="@+id/player_playing_song_name_top"
+					android:layout_width="fill_parent"
+					android:layout_height="25dp"
+					android:gravity="center"
+					android:textColor="@android:color/white"
+					android:textSize="14dp"
+					android:text="">
+				</TextView>
+				<!-- 1.2 player top banner : playing singer/album name  -->
+				<TextView
+					android:id="@+id/player_playing_singer_and_album_name"
+					android:layout_width="fill_parent"
+					android:layout_height="15dp"
+					android:gravity="center"
+					android:textColor="#444444"
+					android:textSize="11dp"
+					android:text="">
+				</TextView>	
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="60dp"
+				android:layout_height="40dp"
+				android:gravity="center">		
+				<ImageView
+					android:id="@+id/title_btn_list"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+		 			android:src="@drawable/player_playlist_selector"/>
+	 		</LinearLayout>
+		</LinearLayout>
+
+		<!-- 2.0 player running progress box -->
+		<!--  android:paddingTop="15dp" -->
+		<LinearLayout
+			android:id="@+id/player_progress_box"
+			android:layout_width="fill_parent"
+			android:layout_height="30dp"
+			android:gravity="center"
+			android:background="#00000000"
+			android:orientation="horizontal">
+
+			<!-- 2.1 player song playing length -->
+			<TextView
+				android:id="@+id/player_song_playing_length"
+				android:layout_width="50dp"
+				android:layout_height="fill_parent"
+				android:gravity="center"
+				android:background="#00000000"
+				android:textColor="#999999"
+				android:textSize="12dp"
+				android:text="00:00">
+			</TextView>
+
+			<!-- 2.2 player running progress bar -->
+ 			<SeekBar
+			    android:id="@+id/playerSeekbar"
+			    android:layout_width="200dp"
+			    android:layout_height="wrap_content"
+			    android:layout_centerVertical="true"
+			    android:paddingLeft="5dp"
+			    android:paddingRight="4dp"
+			    android:gravity="center"
+				android:minHeight="8dp"
+				android:maxHeight="8dp"
+			    android:max="100"  
+			    android:progress="0"
+			    android:secondaryProgress="0"
+			    android:progressDrawable="@drawable/seek_bar"
+			    android:thumb="@drawable/draw_point"
+			    android:thumbOffset="4dp"
+			    android:focusable="true" />
+
+			<!-- 2.3 player song total length -->
+			<TextView
+				android:id="@+id/player_song_total_length"
+				android:layout_width="50dp"
+				android:layout_height="fill_parent"
+				android:background="#00000000"
+				android:gravity="center"
+				android:textColor="#999999"
+				android:textSize="12dp"
+				android:text="00:00">
+			</TextView>
+		</LinearLayout>
+
+		<!-- 3.0 player album image box -->
+		<SurfaceView
+		    android:id="@+id/mSurfaceView1"
+		    android:layout_width="0px" 
+		    android:layout_height="0px"> 
+		</SurfaceView>
+		<LinearLayout
+			android:id="@+id/player_album_image_box"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:orientation="vertical">
+
+			<!-- 3.1 player album image -->
+			<ImageView
+				android:id="@+id/player_album_image"
+	   			android:layout_width="fill_parent"
+	   			android:layout_height="205dp"
+	   			android:gravity="center"
+	  	 		android:src="@drawable/default_album250"/>
+			<ImageView
+				android:id="@+id/player_album_image_reflection"
+	   			android:layout_width="wrap_content"
+	   			android:layout_height="60dp"
+	   			android:layout_marginTop="-15dp"
+	   			android:gravity="center"
+	  	 		android:src="@drawable/default_album250"/>
+		</LinearLayout>
+
+		<!-- 4.0 player running lyrics box -->
+		<LinearLayout
+			android:id="@+id/player_running_lyrics_box"
+			android:layout_width="fill_parent"
+			android:layout_height="30dp"
+			android:gravity="center"
+			android:orientation="horizontal">
+			
+			<!-- 4.1 player running lyrics -->
+			<TextView
+				android:id="@+id/player_playing_song_name"
+				android:layout_width="fill_parent"
+				android:layout_height="30dp"
+				android:gravity="center"
+				android:textColor="@android:color/white"
+				android:textSize="14dp"
+				android:text="">
+			</TextView>
+		</LinearLayout>
+
+
+		<!-- 5.0 other feature -->
+		<LinearLayout
+			android:id="@+id/player_top_function_box"
+			android:layout_width="fill_parent"
+			android:layout_height="30dp"
+			android:layout_marginBottom="0dp"
+			android:orientation="horizontal"
+			android:gravity="center"
+			android:background="@drawable/shuffle_bar_bg">
+
+			<!-- 2.1 player top function : shuffle -->
+			<ImageView
+				android:id="@+id/player_shuffle"
+	   			android:layout_width="60dp"
+	   			android:layout_height="wrap_content"
+	  	 		android:src="@drawable/player_shuffle"/>
+
+	 		<!-- 2.2 player top function : repeat -->
+			<ImageView
+				android:id="@+id/player_repeat"
+	   			android:layout_width="60dp"
+	   			android:layout_height="wrap_content"
+	  	 		android:src="@drawable/player_repeat0"/>
+
+	 		<!-- 2.3 player top function : add song -->
+			<ImageView
+				android:id="@+id/player_add_song"
+	   			android:layout_width="60dp"
+	   			android:layout_height="wrap_content"
+	  	 		android:src="@drawable/player_addsong_selector"/>  	
+
+	 		<!-- 2.4 player top function : show lyrics -->
+			<ImageView
+				android:id="@+id/show_full_lyrics_panel"
+	   			android:layout_width="60dp"
+	   			android:layout_height="wrap_content"
+	  	 		android:src="@drawable/player_lyrics_selector"/>
+		</LinearLayout>
+	</LinearLayout>
+	<!-- FULL Lyrics Panel-->
+	<LinearLayout
+		android:id="@+id/full_lyrics_panel"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:orientation="vertical"
+		android:gravity="center">
+		<LinearLayout
+			android:id="@+id/lyrics_top_info_banner_box"
+			android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:orientation="horizontal"
+			android:background="@drawable/songtitle_bg"
+			android:layout_weight="0">
+			<LinearLayout
+				android:layout_width="60dp"
+				android:layout_height="40dp"
+				android:gravity="center">
+				<ImageView
+					android:id="@+id/lite_album_image"
+		   			android:layout_width="30dp"
+		   			android:layout_height="30dp"
+		  	 		android:src="@drawable/default_album60"/>
+		  	</LinearLayout>
+			<LinearLayout
+				android:layout_width="200dp"
+				android:layout_height="40dp"
+				android:orientation="vertical">
+				<TextView
+					android:id="@+id/lyrics_playing_song_name"
+					android:layout_width="fill_parent"
+					android:layout_height="25dp"
+					android:gravity="center"
+					android:textColor="@android:color/white"
+					android:textSize="14dp"
+					android:text="">
+				</TextView>
+				<TextView
+					android:id="@+id/lyrics_playing_singer_and_album_name"
+					android:layout_width="fill_parent"
+					android:layout_height="15dp"
+					android:gravity="center"
+					android:textColor="#444444"
+					android:textSize="11dp">
+				</TextView>	
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/hidden_full_lyrics_panel"
+				android:layout_width="60dp"
+				android:layout_height="40dp"
+				android:gravity="center">
+				<ImageView
+		   			android:layout_width="wrap_content"
+		   			android:layout_height="wrap_content"
+		  	 		android:src="@drawable/btn_close_icon"/>
+		  	</LinearLayout>
+		</LinearLayout>
+		<ScrollView
+			android:id="@+id/scroll_lyrics"
+			android:layout_height="fill_parent"
+			android:layout_width="fill_parent"
+			android:layout_weight="1"
+			android:background="@drawable/lyrics_bg"
+			android:fillViewport="true">
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:orientation="vertical"
+				android:gravity="center"
+				android:paddingLeft="25dp"
+				android:paddingRight="15dp"
+				android:paddingTop="15dp"
+				android:paddingBottom="20dp">
+				<TextView
+					android:id="@+id/full_lyrics_text"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:gravity="left|top"
+					android:textColor="#444444">
+				</TextView>
+			</LinearLayout>
+			 
+		</ScrollView>
+	</LinearLayout>
+
+	<!-- player button -->
+	<LinearLayout
+		android:id="@+id/player_bottom_function_box"
+		android:layout_width="fill_parent"
+		android:layout_height="50dp"
+		android:layout_weight="0"
+		android:orientation="horizontal"
+		android:gravity="center_vertical|center"
+		android:background="@drawable/play_bar_bg"
+		android:paddingTop="5dp">
+
+		<!-- 6.1 player top function : play prev. song -->
+		<ImageView
+			android:id="@+id/player_prev"
+	  			android:layout_width="35dp"
+	  			android:layout_height="wrap_content"
+	 	 		android:src="@drawable/player_prev_selector"/>
+
+		<!-- 6.2 player top function : play/pause song -->
+		<ImageView
+			android:id="@+id/player_pause"
+	  			android:layout_width="45dp"
+	  			android:layout_height="wrap_content"
+	  			android:layout_marginLeft="20dp"
+	  			android:layout_marginRight="20dp"
+	 	 		android:src="@drawable/player_pause"/>
+
+		<!-- 6.3 player top function : play next song -->
+		<ImageView
+			android:id="@+id/player_next"
+	  			android:layout_width="35dp"
+	  			android:layout_height="wrap_content"
+	  			android:cacheColorHint="@android:color/transparent"
+	  			android:focusable="true" 
+	 	 		android:src="@drawable/player_next_selector"/>
+	</LinearLayout>
+</LinearLayout>
